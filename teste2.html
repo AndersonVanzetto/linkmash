@@ -1,0 +1,142 @@
+<html>
+<head>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("[1]"); /* Imagem de fundo da página */
+            background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            font-family: Arial, sans-serif; /* Fonte padrão da página */
+        }
+
+        /* Estilo para o logotipo */
+        .logo {
+            width: 300px; /* Largura do logotipo */
+            height: 100px; /* Altura do logotipo */
+            position: absolute; /* Posiciona o logotipo de forma absoluta */
+            top: 50px; /* Distância do topo da página */
+            left: 50%; /* Centraliza o logotipo horizontalmente */
+            transform: translateX(-50%); /* Ajusta o logotipo para ficar no centro */
+        }
+
+        /* Estilo para os botões */
+        .button {
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+            background-color: #333; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove a borda do botão */
+            border-radius: 10px; /* Arredonda os cantos do botão */
+            font-size: 20px; /* Tamanho da fonte do botão */
+            cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão */
+            position: absolute; /* Posiciona o botão de forma absoluta */
+            left: 50%; /* Centraliza o botão horizontalmente */
+            transform: translateX(-50%); /* Ajusta o botão para ficar no centro */
+        }
+
+        /* Estilo para o primeiro botão */
+        #button1 {
+            top: 200px; /* Distância do topo da página */
+        }
+
+        /* Estilo para o segundo botão */
+        #button2 {
+            top: 300px; /* Distância do topo da página */
+        }
+
+        /* Estilo para o terceiro botão */
+        #button3 {
+            top: 400px; /* Distância do topo da página */
+        }
+
+        /* Estilo para o quarto botão */
+        #button4 {
+            top: 500px; /* Distância do topo da página */
+        }
+
+        /* Estilo para o quinto botão */
+        #button5 {
+            top: 600px; /* Distância do topo da página */
+        }
+
+        /* Estilo para as imagens que se expandem */
+        .image {
+            width: 100%; /* Largura da imagem */
+            height: 100%; /* Altura da imagem */
+            position: fixed; /* Posiciona a imagem de forma fixa */
+            top: 0; /* Alinha a imagem ao topo da página */
+            left: 0; /* Alinha a imagem à esquerda da página */
+            display: none; /* Esconde a imagem inicialmente */
+            z-index: 1; /* Coloca a imagem acima dos outros elementos */
+        }
+
+        /* Estilo para o botão de fechar */
+        .close {
+            width: 50px; /* Largura do botão de fechar */
+            height: 50px; /* Altura do botão de fechar */
+            background-color: white; /* Cor de fundo do botão de fechar */
+            border: none; /* Remove a borda do botão de fechar */
+            border-radius: 50%; /* Transforma o botão de fechar em um círculo */
+            font-size: 30px; /* Tamanho da fonte do botão de fechar */
+            cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão de fechar */
+            position: absolute; /* Posiciona o botão de fechar de forma absoluta */
+            top: 10px; /* Distância do topo da página */
+            left: 10px; /* Distância da esquerda da página */
+            display: none; /* Esconde o botão de fechar inicialmente */
+            z-index: 2; /* Coloca o botão de fechar acima das imagens */
+        }
+
+        /* Define a animação de pulsar */
+        @keyframes pulse {
+            0% {
+                transform: translateX(-50%) scale(1); /* Estado inicial dos botões */
+            }
+            50% {
+                transform: translateX(-50%) scale(1.1); /* Estado intermediário dos botões */
+            }
+            100% {
+                transform: translateX(-50%) scale(1); /* Estado final dos botões */
+            }
+        }
+
+        /* Aplica a animação aos botões */
+        .button {
+            animation: pulse 1s ease-in-out; /* Nome, duração, tipo e direção da animação */
+            animation-fill-mode: forwards; /* Mantém o estado final da animação */
+        }
+    </style>
+    <script>
+        // Função para mostrar uma imagem e o botão de fechar
+        function showImage(imageId) {
+            var image = document.getElementById(imageId); // Obtém a imagem pelo seu id
+            var close = document.getElementById("close"); // Obtém o botão de fechar
+            image.style.display = "block"; // Mostra a imagem
+            close.style.display = "block"; // Mostra o botão de fechar
+        }
+
+        // Função para esconder todas as imagens e o botão de fechar
+        function hideImages() {
+            var images = document.getElementsByClassName("image"); // Obtém todas as imagens pela sua classe
+            var close = document.getElementById("close"); // Obtém o botão de fechar
+            for (var i = 0; i < images.length; i++) { // Para cada imagem
+                images[i].style.display = "none"; // Esconde a imagem
+            }
+            close.style.display = "none"; // Esconde o botão de fechar
+        }
+    </script>
+</head>
+<body>
+    <img src="[2]" class="logo" alt="Logotipo"> <!-- Imagem do logotipo -->
+    <button id="button1" class="button" onclick="showImage('image1')">Botão 1</button> <!-- Primeiro botão -->
+    <button id="button2" class="button" onclick="showImage('image2')">Botão 2</button> <!-- Segundo botão -->
+    <button id="button3" class="button" onclick="showImage('image3')">Botão 3</button> <!-- Terceiro botão -->
+    <button id="button4" class="button" onclick="window.open('https://www.random.org')">Botão 4</button> <!-- Quarto botão -->
+    <button id="button5" class="button" onclick="window.open('https://hosted.random.org')">Botão 5</button> <!-- Quinto botão -->
+    <img src="[3]" id="image1" class="image" alt="Imagem 1"> <!-- Primeira imagem que se expande -->
+    <img src="[4]" id="image2" class="image" alt="Imagem 2"> <!-- Segunda imagem que se expande -->
+    <img src="[5]" id="image3" class="image" alt="Imagem 3"> <!-- Terceira imagem que se expande -->
+    <button id="close" class="close" onclick="hideImages()">&larr;</button> <!-- Botão de fechar -->
+</body>
+</html>
