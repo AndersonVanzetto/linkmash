@@ -1,1 +1,105 @@
-<!DOCTYPE html> <html lang="pt-br"> <head>   <meta charset="UTF-8">   <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!-- Link para o Bootstrap CSS -->   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">   <style>     :root {       --imagem1: "imagem1.jpg";       --imagem2: "imagem2.jpg";       --imagem3: "imagem3.jpg";       --imagem4: "imagem4.jpg";       /* Repetir para as demais imagens */     }   </style> </head> <body>   <div class="container">     <div class="row g-2">       <!-- Coluna 1 -->       <div class="col">         <!-- Imagem 1 -->         <img src="var(--imagem1)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal1">         <!-- Modal 1 -->         <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">           <div class="modal-dialog modal-dialog-centered">             <div class="modal-content">               <div class="modal-body">                 <img src="var(--imagem1)" class="img-fluid">               </div>               <div class="modal-footer">                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>               </div>             </div>           </div>         </div>       </div>       <!-- Coluna 2 -->       <div class="col">         <!-- Imagem 2 -->         <img src="var(--imagem2)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal2">         <!-- Modal 2 -->         <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">           <div class="modal-dialog modal-dialog-centered">             <div class="modal-content">               <div class="modal-body">                 <img src="var(--imagem2)" class="img-fluid">               </div>               <div class="modal-footer">                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>               </div>             </div>           </div>         </div>       </div>       <!-- Coluna 3 -->       <div class="col">         <!-- Imagem 3 -->         <img src="var(--imagem3)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal3">         <!-- Modal 3 -->         <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">           <div class="modal-dialog modal-dialog-centered">             <div class="modal-content">               <div class="modal-body">                 <img src="var(--imagem3)" class="img-fluid">               </div>               <div class="modal-footer">                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>               </div>             </div>           </div>         </div>       </div>       <!-- Coluna 4 -->       <div class="col">         <!-- Imagem 4 -->         <img src="var(--imagem4)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal4">         <!-- Modal 4 -->         <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">           <div class="modal-dialog modal-dialog-centered">             <div class="modal-content">               <div class="modal-body">                 <img src="var(--imagem4)" class="img-fluid">               </div>               <div class="modal-footer">                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>               </div>             </div>           </div>         </div>       </div>     </div>     <!-- Repetir o mesmo padrão para as demais imagens -->   </div>   <!-- Link para o jQuery -->   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>   <!-- Link para o Bootstrap JS -->   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script> </body> </html>
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+  <head>   
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <!-- Link para o Bootstrap CSS -->   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">   
+    <style>     
+      :root {      
+        --imagem1: "imagem1.jpg";      
+        --imagem2: "imagem2.jpg";      
+        --imagem3: "imagem3.jpg";       
+        --imagem4: "imagem4.jpg";      
+        /* Repetir para as demais imagens */     
+      }   
+    </style>
+  </head> 
+  <body>   
+    <div class="container">     
+      <div class="row g-2">       
+        <!-- Coluna 1 -->      
+        <div class="col">         
+          <!-- Imagem 1 -->         
+          <img src="var(--imagem1)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal1">         
+          <!-- Modal 1 -->         
+          <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">           
+            <div class="modal-dialog modal-dialog-centered">             
+              <div class="modal-content">               
+                <div class="modal-body">                 
+                  <img src="var(--imagem1)" class="img-fluid">               
+                </div>               
+                <div class="modal-footer">                 
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>               
+                </div>             
+              </div>           
+            </div>         
+          </div>      
+        </div>       
+        <!-- Coluna 2 -->      
+        <div class="col">        
+          <!-- Imagem 2 -->         
+          <img src="var(--imagem2)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal2">         
+          <!-- Modal 2 -->         
+          <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">           
+            <div class="modal-dialog modal-dialog-centered">             
+              <div class="modal-content">               
+                <div class="modal-body">                 
+                  <img src="var(--imagem2)" class="img-fluid">              
+                </div>              
+                <div class="modal-footer">                 
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>               
+                </div>             
+              </div>           
+            </div>         
+          </div>       
+        </div>       
+        <!-- Coluna 3 -->       
+        <div class="col">         
+          <!-- Imagem 3 -->        
+          <img src="var(--imagem3)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal3">         
+          <!-- Modal 3 -->         
+          <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">           
+            <div class="modal-dialog modal-dialog-centered">             
+              <div class="modal-content">               
+                <div class="modal-body">                 
+                  <img src="var(--imagem3)" class="img-fluid">               
+                </div>               
+                <div class="modal-footer">                 
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">  
+               </button>               
+              </div>             
+            </div>           
+          </div>         
+        </div>       
+      </div>       
+      <!-- Coluna 4 -->       
+        <div class="col">         
+          <!-- Imagem 4 -->         
+          <img src="var(--imagem4)" class="img-fluid" data-bs-toggle="modal" data-bs-target="#modal4">         
+          <!-- Modal 4 -->         
+          <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">           
+            <div class="modal-dialog modal-dialog-centered">             
+              <div class="modal-content">               
+                <div class="modal-body">                 
+                  <img src="var(--imagem4)" class="img-fluid">               
+                </div>               
+                <div class="modal-footer">                 
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+                  </button>               
+                </div>             
+              </div>           
+            </div>         
+          </div>       
+        </div>     
+      </div>     
+      <!-- Repetir o mesmo padrão para as demais imagens -->   
+    </div>   
+    <!-- Link para o jQuery -->   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+    </script>   
+    <!-- Link para o Bootstrap JS -->   
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js">
+      </script> 
+  </body> 
+</html>
