@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Natal</title>
+    <style>
+        /* Estilos para o pinheiro de Natal */
+        #pinheiro {
+            width: 200px;
+            height: 300px;
+            background-color: green;
+            margin: 0 auto;
+            position: relative;
+        }
+        #pinheiro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 150px solid green;
+            transform: translateX(-50%);
+        }
+        /* Estilos para os presentes */
+        .presente {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        /* Estilos para o vídeo */
+        #video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 9999;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="pinheiro"></div>
+    <div>
+        <div class="presente"></div>
+        <div class="presente"></div>
+        <div class="presente"></div>
+        <div class="presente"></div>
+        <div class="presente"></div>
+        <div class="presente"></div>
+    </div>
+    <div id="video">
+        <h1>Encontre seu presente</h1>
+        <video src="seu_video.mp4" autoplay controls></video>
+    </div>
+    <script>
+        var presentes = document.querySelectorAll('.presente');
+        var contador = 0;
+        for (var i = 0; i < presentes.length; i++) {
+            presentes[i].addEventListener('click', function() {
+                contador++;
+                if (contador === 6) {
+                    document.getElementById('video').style.display = 'block';
+                } else if (contador > 6) {
+                    // Não faz nada
+                } else {
+                    alert('Este não é o seu presente!');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
