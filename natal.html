@@ -36,6 +36,17 @@
             } else {
                 var novaPosicaoX = Math.floor(Math.random() * (window.innerWidth / 3)) + (window.innerWidth / 3);
                 var novaPosicaoY = Math.floor(Math.random() * (window.innerHeight / 3)) + (window.innerHeight * 2 / 3);
+                var limite = 50;
+                if (novaPosicaoX < limite) {
+                    novaPosicaoX = limite;
+                } else if (novaPosicaoX > window.innerWidth - limite) {
+                    novaPosicaoX = window.innerWidth - limite;
+                }
+                if (novaPosicaoY < window.innerHeight * 2 / 3 + limite) {
+                    novaPosicaoY = window.innerHeight * 2 / 3 + limite;
+                } else if (novaPosicaoY > window.innerHeight - limite) {
+                    novaPosicaoY = window.innerHeight - limite;
+                }
                 imagemMenor.style.top = novaPosicaoY + 'px';
                 imagemMenor.style.left = novaPosicaoX + 'px';
             }
