@@ -1,4 +1,4 @@
-<!DOCTYPE<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,9 @@
         /* Estilos para a imagem menor */
         #imagem-menor {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            bottom: 0;
+            left: 33%;
+            transform: translate(-50%, 50%);
             cursor: pointer;
         }
     </style>
@@ -34,8 +34,8 @@
             } else if (contador > 6) {
                 // Não faz nada
             } else {
-                var novaPosicaoX = Math.floor(Math.random() * window.innerWidth);
-                var novaPosicaoY = Math.floor(Math.random() * window.innerHeight);
+                var novaPosicaoX = Math.floor(Math.random() * (window.innerWidth / 3)) + (window.innerWidth / 3);
+                var novaPosicaoY = Math.floor(Math.random() * (window.innerHeight / 3)) + (window.innerHeight * 2 / 3);
                 imagemMenor.style.top = novaPosicaoY + 'px';
                 imagemMenor.style.left = novaPosicaoX + 'px';
             }
