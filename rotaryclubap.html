@@ -8,7 +8,7 @@
 <meta property="og:title" content="Doações Rotary Club Antônio Prado" />
 <meta property="og:description" content="Ajude o Rotary Club Antônio Prado a fazer a diferença na comunidade. Faça sua doação!" />
 <meta property="og:image" content="rotarycapa.PNG" />
-<meta property="og:url" content="http://linkmash.me/rotaryclubap" />
+<meta property="og:url" content="http://linkmash.me/rotarclubap" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
 
@@ -32,7 +32,7 @@
     padding: 30px 50px; /* Aumenta o tamanho do botão */
     font-size: 24px; /* Aumenta o tamanho do texto */
     color: black; /* Cor do texto */
-    background-color: white; /* Cor de fundo do botão */
+    background-color: white !important; /* Fixa a cor de fundo como branca */
     border: none;
     cursor: pointer;
     border-radius: 5px; /* Bordas arredondadas */
@@ -42,21 +42,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: pulsar 1s infinite; /* Aplica a animação continuamente */
+    animation: pulsar 1s infinite linear; /* Aplica a animação continuamente */
   }
 
   @keyframes pulsar {
-    0% {
+    0%, 100% {
       transform: scale(1) translate(-50%, -50%);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
     50% {
       transform: scale(1.1) translate(-50%, -50%);
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-    }
-    100% {
-      transform: scale(1) translate(-50%, -50%);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
   }
 </style>
