@@ -1,15 +1,24 @@
- <html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
 <title>Doações Rotary Club Antônio Prado</title>
+
+<!-- Meta tags do Open Graph para compartilhamento em redes sociais -->
+<meta property="og:title" content="Doações Rotary Club Antônio Prado" />
+<meta property="og:description" content="Ajude o Rotary Club Antônio Prado a fazer a diferença na comunidade. Faça sua doação!" />
+<meta property="og:image" content="caminho_para_sua_imagem.jpg" />
+<meta property="og:url" content="http://www.seusite.com.br" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+
 <style>
   body, html {
     height: 100%;
     margin: 0;
   }
   .bg {
-    /* Substitua 'url_da_sua_imagem.jpg' pelo caminho da sua imagem */
+    /* Substitua 'rotarybg.PNG' pelo caminho da sua imagem */
     background-image: url('rotarybg.PNG');
     height: 100%;
     background-position: center;
@@ -17,12 +26,40 @@
     background-size: cover;
     position: relative;
   }
-  /* Estilo para centralizar o botão na tela */
+
+  /* Estilos adicionais para o botão */
   .btn-centralizado {
+    padding: 20px 40px; /* Aumenta o tamanho do botão */
+    font-size: 20px; /* Aumenta o tamanho do texto */
+    color: black; /* Cor do texto */
+    background-color: white; /* Cor de fundo do botão */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+    transition: all 0.3s; /* Transição suave para a animação */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  /* Animação pulsante */
+  @keyframes pulsar {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  /* Aplicando a animação ao botão quando o mouse está sobre ele */
+  .btn-centralizado:hover {
+    animation: pulsar 1s infinite;
   }
 </style>
 </head>
