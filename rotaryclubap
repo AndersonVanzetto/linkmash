@@ -10,7 +10,7 @@
   }
   .bg {
     /* Substitua 'url_da_sua_imagem.jpg' pelo caminho da sua imagem */
-    background-image: url('url_da_sua_imagem.jpg');
+    background-image: url('rotarybg.png');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
