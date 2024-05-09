@@ -18,7 +18,7 @@
     margin: 0;
   }
   .bg {
-    background-image: url('rotarybg.PNG');
+    background-image: url('rotarybg.PNG'); /* Imagem de fundo para dispositivos móveis */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,32 +27,19 @@
   }
 
   .btn-centralizado {
-    width: calc(100% - 30%); /* Largura com 15% de espaço de cada lado */
-    max-width: 600px; /* Define uma largura máxima para o botão */
-    padding: 30px 50px; /* Aumenta o tamanho do botão */
-    font-size: 24px; /* Aumenta o tamanho do texto */
-    color: black; /* Cor do texto */
-    background-color: white !important; /* Fixa a cor de fundo como branca */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra para o botão */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para a animação */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: pulsar 1s infinite linear; /* Aplica a animação continuamente */
+    width: calc(100% - 90%); /* Largura com 45% de espaço de cada lado para dispositivos móveis */
+    padding: 30px 50px; /* Tamanho do botão para dispositivos móveis */
+    /* ...outros estilos... */
   }
 
-  @keyframes pulsar {
-    0%, 100% {
-      transform: scale(1) translate(-50%, -50%);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Estilos para dispositivos com tela maior que 1024px */
+  @media (min-width: 1024px) {
+    .bg {
+      background-image: url('rotarybgdesktop.PNG'); /* Imagem de fundo para computadores */
     }
-    50% {
-      transform: scale(1.1) translate(-50%, -50%);
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    .btn-centralizado {
+      width: calc(100% - 90%); /* Largura com 45% de espaço de cada lado para computadores */
+      padding: 15px 25px; /* Tamanho reduzido do botão para computadores */
     }
   }
 </style>
