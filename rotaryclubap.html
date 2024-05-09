@@ -8,7 +8,7 @@
 <meta property="og:title" content="Doações Rotary Club Antônio Prado" />
 <meta property="og:description" content="Ajude o Rotary Club Antônio Prado a fazer a diferença na comunidade. Faça sua doação!" />
 <meta property="og:image" content="rotarycapa.PNG" />
-<meta property="og:url" content="http://linkmash.me/rotaryclubap" />
+<meta property="og:url" content="http://linkmash.me/rotarclubap" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
 
@@ -29,6 +29,7 @@
 
   /* Estilos adicionais para o botão */
   .btn-centralizado {
+    width: calc(100% - 30%); /* Largura com 15% de espaço de cada lado */
     padding: 20px 40px; /* Aumenta o tamanho do botão */
     font-size: 20px; /* Aumenta o tamanho do texto */
     color: black; /* Cor do texto */
@@ -37,7 +38,7 @@
     cursor: pointer;
     border-radius: 5px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra para o botão */
-    transition: all 0.3s; /* Transição suave para a animação */
+    transition: box-shadow 0.3s; /* Transição suave para a animação da sombra */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,13 +48,13 @@
   /* Animação pulsante */
   @keyframes pulsar {
     from {
-      transform: scale(1);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
     50% {
-      transform: scale(1.05);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
     }
     to {
-      transform: scale(1);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -67,13 +68,13 @@
 
 <div class="bg">
   <!-- Botão para copiar o texto -->
-  <button class="btn-centralizado" onclick="copiarTexto()">PIX COPIA E COLA</button>
+  <button class="btn-centralizado" onclick="copiarTexto()">COPIAR PIX</button>
 </div>
 
 <script>
 function copiarTexto() {
   // O texto que você quer copiar
-  var textoParaCopiar = "Texto Exemplo";
+  var textoParaCopiar = "00020101021126360014br.gov.bcb.pix0114249097670001045204000053039865802BR5925ROTARY CLUB DE ANTONIO PR6008BRASILIA62070503***6304564B";
   var elementoTemporario = document.createElement('textarea');
   elementoTemporario.value = textoParaCopiar;
   document.body.appendChild(elementoTemporario);
@@ -82,7 +83,7 @@ function copiarTexto() {
   document.body.removeChild(elementoTemporario);
   
   // Alerta para confirmar que o texto foi copiado
-  alert("CHAVE PIX COPIADA > COLE NA ÁREA PIX DO SEU BANCO E FAÇA SUA DOAÇÃO");
+  alert("CHAVE PIX COPIADA AGORA COLE NA ÁREA PIX DO SEU BANCO PARA FAZER A DOAÇÃO");
 }
 </script>
 
