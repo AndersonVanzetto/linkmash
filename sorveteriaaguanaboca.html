@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu Cardápio Online</title>
 
+<!-- Ícone do Site -->
+<link rel="icon" type="image/png" href="caminho/para/seu-icon.png">
+
+<!-- Descrição do Site -->
+<meta name="description" content="Descubra nosso cardápio delicioso e faça seu pedido online.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seusite.com.br/">
+<meta property="og:title" content="Seu Cardápio Online">
+<meta property="og:description" content="Aproveite a conveniência de pedir suas refeições favoritas online.">
+<meta property="og:image" content="caminho/para/sua-imagem-de-capa.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://seusite.com.br/">
+<meta property="twitter:title" content="Seu Cardápio Online">
+<meta property="twitter:description" content="Faça seu pedido agora e desfrute de uma experiência gastronômica incrível.">
+<meta property="twitter:image" content="caminho/para/sua-imagem-de-capa.png">
+
+<style>
+/* Seus estilos CSS aqui */
+.menu-fixo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  background: #000000; /* Preto - Logotipo */
+}
+.menu-fixo #logotipo {
+  width: 100px; /* Ajuste conforme necessário */
+  height: 50px; /* Ajuste conforme necessário */
+  margin: 10px;
+  background: #000000; /* Preto */
+}
+.menu-fixo .menu-item {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+.menu-fixo #menu1 { background: #FFFFFF; } /* Branco */
+.menu-fixo #menu2 { background: #FFA500; } /* Laranja */
+.menu-fixo #menu3 { background: #008000; } /* Verde */
+.menu-fixo .menu-item:hover {
+  transform: scale(1.1);
+}
+.bloco {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px; /* Ajuste conforme a altura do menu */
+}
+.bloco .produto {
+  flex: 1 0 21%; /* 4 divs por linha */
+  margin: 10px;
+  height: 200px; /* Ajuste conforme necessário */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.bloco #produto1 { background: #0000FF; } /* Azul */
+.bloco #produto2 { background: #FFC0CB; } /* Rosa */
+.bloco #produto3 { background: #FF0000; } /* Vermelho */
+.bloco #produto4 { background: #FFFF00; } /* Amarelo */
+.bloco .produto:hover {
+  transform: scale(1.05);
+}
+.bloco .produto.expandido {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  z-index: 10;
+}
+.fechar {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 11;
+}
+</style>
+</head>
+<body>
+
+<div class="menu-fixo">
+  <div id="logotipo">Logo</div>
+  <div id="menu1" class="menu-item"></div>
+  <div id="menu2" class="menu-item"></div>
+  <div id="menu3" class="menu-item"></div>
+</div>
+
+<div class="bloco">
+  <!-- Adicione suas divs aqui -->
+  <div id="produto1" class="produto"></div>
+  <div id="produto2" class="produto"></div>
+  <div id="produto3" class="produto"></div>
+  <div id="produto4" class="produto"></div>
+  <!-- Adicione mais produtos conforme necessário -->
+</div>
+
+<button class="fechar" onclick="fecharExpansao()">Fechar</button>
+
+<script>
+// Seu JavaScript aqui
+function expandirImagem(produto) {
+  produto.classList.add('expandido');
+  document.querySelector('.fechar').style.display = 'block';
+}
+
+function fecharExpansao() {
+  var produtosExpandidos = document.querySelectorAll('.expandido');
+  produtosExpandidos.forEach(function(produto) {
+    produto.classList.remove('expandido');
+  });
+  document.querySelector('.fechar').style.display = 'none';
+}
+
+document.querySelectorAll('.produto').forEach(function(produto) {
+  produto.addEventListener('click', function() {
+    expandirImagem(produto);
+  });
+});
+</script>
+
+</body>
+</html>
